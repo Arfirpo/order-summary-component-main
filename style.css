@@ -1,0 +1,228 @@
+:root{
+    font-size: 16px;
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: hsl(245, 75%, 52%);
+    --Brightblue-hover: hsl(245, 100%, 71%);
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+    --ff: 'Red Hat Display', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--Paleblue);
+}
+
+.card {
+    width: 20.625rem;
+    height: 35.625rem;
+    margin: 4.375rem auto 2.1875rem;
+    background: #fff;
+    border-radius: 1.25rem;
+}
+
+.card__image-container {
+    width: 20.625rem;
+    height: 10rem;
+}
+
+.card__image-container-image {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 1.25rem;
+    border-top-left-radius: 1.25rem;
+}
+
+.card__content-container {
+    padding: 2.125rem 1.4375rem;
+}
+
+.card__content-title {
+    color: var(--Darkblue);
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: -0.05rem;
+    margin-bottom: 1.3125rem;
+}
+
+.card__content-paragraph {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--Desaturatedblue);
+    letter-spacing: -0.02rem;
+    padding: 0 0.875rem;
+    margin-bottom: 1.625rem;
+    line-height: 1.5625rem;
+}
+
+.card__content-plan-description {
+    width: 100%;
+    height: 5rem;
+    background: var(--Verypaleblue);
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content:space-between;
+    padding: 1.25rem;
+    margin-bottom: 1.375rem;
+}
+
+.card__content-plan-description-anual-plan {
+    display: flex;    
+}
+
+.card__content-plan-description__icon {
+    margin-right: 1.25rem;
+}
+
+.card__content-plan-description__paragraph {
+    color: var(--Darkblue);
+    font-weight: 900;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+}
+
+.card__content-plan-description__paragraph-price {
+    color: var(--Desaturatedblue);
+    font-weight: 500;
+    font-size: 0.84375rem;
+    letter-spacing: 0.06rem;
+}
+
+.card__content-plan-description__link {
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: var(--Brightblue);
+}
+
+.card__button-confirm {
+    width: 100%;
+    height: 3.125rem;
+    background: var(--Brightblue);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    border-radius: 0.625rem;
+    border: none;
+    box-shadow: 0 1.125rem 1.375rem -0.0625rem hsla(244, 47%, 65%, 0.4);
+    margin-bottom: 1.375rem;
+}
+
+.card__button-confirm:hover,
+.card__content-plan-description__link:hover,
+.card__button-cancel:hover {
+    cursor: pointer;
+    text-decoration: none;    
+}
+
+.card__button-confirm:hover {
+    background: var(--Brightblue-hover);
+}
+
+.card__content-plan-description__link:hover{
+    color: var(--Brightblue-hover);
+}
+
+.card__button-cancel {
+    border: none;
+    background: none;
+    width: 100%;
+    font-weight: 900;
+    color: var(--Desaturatedblue);
+    font-size: 0.875rem;
+}
+
+.card__button-cancel:hover {
+    color: var(--Darkblue);
+}
+
+.attribution {
+    font-size: 0.6875rem; text-align: center;
+    width: 25rem;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 0.75rem;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width:500px) {
+    .card {
+        width: 28.125rem;
+        height: 43.75rem;
+        margin: 6.25rem auto;
+    }
+    
+    .card__image-container {
+        width: 28.125rem;
+        height: 13.75rem; 
+    }
+
+    .card__image-container-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card__content-container {
+        padding: 3rem;
+    }
+
+    .card__content-title {
+        font-size: 1.875rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .card__content-paragraph {
+        color: var(--Desaturatedblue);
+        font-weight: 500;
+        font-size: 1.125rem;
+        letter-spacing: -0.044rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .card__content-plan-description {
+        height: 6.25rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .card__content-plan-description__paragraph {
+        font-weight: 900;
+        font-size: 1.0625rem;
+        line-height: 1.625rem;
+    }
+    
+    .card__content-plan-description__paragraph-price {
+        color: var(--Desaturatedblue);
+        font-weight: 500;
+        font-size: 1rem;
+    }
+    
+    .card__content-plan-description__link {
+        font-size: 0.875rem;        
+    }
+
+    .attribution {
+        font-size: 0.875rem;
+    }
+}
